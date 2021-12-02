@@ -19,8 +19,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     EditText editTextEmail, editTextPassword;
     Button buttonLogin;
-    String EMAIL = "alex@gmail.com";
-    String PASSWORD = "1234";
+    final String EMAIL = "alex@gmail.com";
+    final String PASSWORD = "1234";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +67,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 }
             } else {
                 Toast.makeText(this, "The E-mail is not correct!", Toast.LENGTH_LONG).show();
-                Toast.makeText(this, EMAIL, Toast.LENGTH_LONG).show();
             }
         }
     }
