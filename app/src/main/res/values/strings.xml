@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Currency Converter</string>
+
+    <string-array name="currencies">
+        <item>USD</item>
+        <item>BR</item>
+    </string-array>
+
+    <string-array name="login_credentials">
+        <item>email|alex@gmail.com</item>
+        <item>password|1234</item>
+    </string-array>
+
 </resources>

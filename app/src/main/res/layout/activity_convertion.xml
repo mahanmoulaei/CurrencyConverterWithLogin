@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LoginActivity"
+    tools:context=".ConvertionActivity"
     >
 
     <Space
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:src="@drawable/logo"
@@ -36,11 +36,11 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/textViewEmail"
+            android:id="@+id/textViewEuro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="E-mail"
+            android:text="Euro"
             style="@style/label"
             />
 
@@ -50,7 +50,7 @@
             android:layout_weight="1" />
 
         <EditText
-            android:id="@+id/editTextEmail"
+            android:id="@+id/editTextEuro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -79,11 +79,11 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/textViewPassword"
+            android:id="@+id/textViewCurrency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Password"
+            android:text="Currency"
             style="@style/label"
             />
 
@@ -92,13 +92,25 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <EditText
-            android:id="@+id/editTextPassword"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dropdown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPassword" />
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Select A Currency"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Space
             android:layout_width="wrap_content"
@@ -113,29 +125,69 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_weight="3"
         >
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/buttonLogin"
-            android:text="login"
-            style="@style/button"
-            />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3" />
+            <Button
+                android:id="@+id/buttonConvert"
+                style="@style/button"
+                android:text="Convert" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Value"
+                style="@style/label"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <TextView
+                android:id="@+id/textViewValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.0"
+                style="@style/label"/>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+        </LinearLayout>
     </LinearLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 </LinearLayout>
